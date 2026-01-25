@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Vishvesh ❄️</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #0b1026, #111833);
+  color: #e6ebff;
+  text-align: center;
+  overflow-x: hidden;
+}
+section {
+  padding: 70px 20px;
+}
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+button {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.card {
+  max-width: 800px;
+  margin: auto;
+  background: rgba(255,255,255,0.06);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 25px rgba(173,190,255,0.15);
+}
+.hidden { display: none; }
+.snowflake {
+  position: fixed;
+  top: -10px;
+  font-size: 16px;
+  opacity: 0.6;
+  animation: fall linear infinite;
+}
+@keyframes fall {
+  to { transform: translateY(110vh); }
+}
+</style>
+</head>
+
+<body>
+
+<section>
+  <h1>Happy Birthday Vishvesh ❄️</h1>
+  <p>Today, everything here is for you.</p>
+  <button onclick="document.getElementById('hub').scrollIntoView()">✨ Begin Your Story ✨</button>
+</section>
+
+<section id="hub">
+  <div class="card">
+    <h2>🎮 Mini Challenge</h2>
+    <p>Level 1: Smile right now</p>
+    <p>Level 2: Remember a moment with me</p>
+    <p>Level 3: Accept that you’re deeply loved</p>
+    <p>Level 4: Realize how proud I am of you</p>
+    <p>Level 5: Click the button below 💙</p>
+    <button onclick="alert('Playlist unlocked 🎧')">Unlock Reward</button>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>💙 About You</h2>
+    <p>You are passion, discipline, creativity, and warmth.</p>
+    <p>Your love for gaming, growth, dogs, and dreams inspires me daily.</p>
+    <p>Being you is your superpower.</p>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>🍓 Cooking Corner</h2>
+    <p>Pizza made with love 🍕</p>
+    <p>Cheese because you’re cheesy.</p>
+    <p>Spice because life with you is exciting.</p>
+    <p>Perfect. Just like you.</p>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>🎁 Surprise</h2>
+    <p>Add your audio or video link here.</p>
+    <p>This is my heart speaking to you.</p>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>💌 Final Note</h2>
+    <p>Happy Birthday, my love ❄️</p>
+    <p>You make my world softer, brighter, and warmer.</p>
+    <p>Here’s to us, to you, and to everything still coming.</p>
+    <p>Always yours 💙</p>
+  </div>
+</section>
+
+<script>
+for(let i=0;i<30;i++){
+  let snow=document.createElement("div");
+  snow.innerHTML="❄️";
+  snow.className="snowflake";
+  snow.style.left=Math.random()*100+"vw";
+  snow.style.animationDuration=3+Math.random()*5+"s";
+  document.body.appendChild(snow);
+}
+</script>
+
+</body>
+</html>
