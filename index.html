@@ -71,138 +71,14 @@ button {
   </button>
 </section>
 
-  
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Vishvesh's Journey ❄️</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-<style>
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(180deg, #0b1026, #111833);
-  color: #e6ebff;
-  overflow-x: hidden;
-  text-align: center;
-}
 
-h1 {
-  font-family: 'Playfair Display', serif;
-  margin-top: 40px;
-  font-size: 2.5rem;
-}
-
-.journey-track {
-  display: flex;
-  gap: 40px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  padding: 60px 40px;
-}
-
-.journey-item {
-  flex: 0 0 70%;
-  scroll-snap-align: center;
-  border-radius: 20px;
-  overflow: hidden;
-  position: relative;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-  background: rgba(255,255,255,0.05);
-  padding-bottom: 20px;
-}
-
-.journey-item img {
-  width: 100%;
-  border-radius: 20px;
-  transition: transform 0.5s ease;
-}
-
-.journey-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 40px rgba(173,190,255,0.3);
-}
-
-.journey-item p {
-  margin-top: 10px;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  font-family: 'Playfair Display', serif;
-  color: #e6ebff;
-  padding: 0 10px;
-}
-
-::-webkit-scrollbar {
-  height: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(173,190,255,0.3);
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(0,0,0,0.1);
-}
-
-.back-btn {
-  margin: 20px;
-  padding: 12px 28px;
-  border-radius: 30px;
-  border: 1px solid rgba(255,255,255,0.3);
-  background: rgba(255,255,255,0.12);
-  color: white;
-  cursor: pointer;
-}
-</style>
-</head>
-<body>
-
-<h1>Vishvesh's Journey ❄️</h1>
-<p style="opacity:0.8;">Swipe or scroll sideways to see the story of your life 💙</p>
-
-<div class="journey-track">
-  <div class="journey-item">
-    <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d" alt="Childhood">
-    <p>Before the world asked questions,<br>you were already curious.</p>
+  <section>
+  <div class="card">
+    <h2>🌟 Your Journey</h2>
+    <p>Tap to explore your story from childhood to now ✨</p>
+    <button onclick="window.location.href='journey.html'">Explore Your Journey</button>
   </div>
-  <div class="journey-item">
-    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Early years">
-    <p>Exploring everything with wide-eyed wonder,<br>innocence in every step.</p>
-  </div>
-  <div class="journey-item">
-    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Teenage">
-    <p>Between growing up and figuring out life,<br>finding passions and dreams.</p>
-  </div>
-  <div class="journey-item">
-    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1" alt="Hobbies">
-    <p>Discovering gaming, bikes, and creativity,<br>the sparks that make you unique.</p>
-  </div>
-  <div class="journey-item">
-    <img src="https://images.unsplash.com/photo-1502767089025-6572583495b3" alt="Photography">
-    <p>Capturing moments and feelings,<br>turning everyday into memories.</p>
-  </div>
-  <div class="journey-item">
-    <img src="https://images.unsplash.com/photo-1557682250-9e9d73e9d77f" alt="Poetry">
-    <p>Your words carry magic,<br>touching hearts with every line.</p>
-  </div>
-  <div class="journey-item">
-    <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92" alt="Gym & Growth">
-    <p>Growing stronger each day,<br>discipline shaping your journey.</p>
-  </div>
-  <div class="journey-item">
-    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" alt="Today">
-    <p>Now — playful, passionate, loving.<br>The incredible person you are today.</p>
-  </div>
-</div>
-
-<button class="back-btn" onclick="window.history.back()">← Back to Hub</button>
-
-</body>
-</html>
-
+</section>
 
 
 
