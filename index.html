@@ -72,141 +72,109 @@ button {
 </section>
 
 <section id="journey">
-  <h2>Your Journey</h2>
-  <p class="journey-sub">
-    A slow scroll through who you were, who you are, and who you're becoming.
-  </p>
+  <div class="card">
+    <h2>Your Journey 🕰️</h2>
+    <p class="journey-sub">
+      A slow scroll through who you were, who you are, and who you're becoming.
+    </p>
 
-  <div class="journey-track">
+    <div class="journey-track">
 
-    <div class="journey-item">
-      <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d">
-      <p>Before the world asked questions,<br>you were already curious.</p>
+      <div class="journey-item">
+        <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d" alt="Childhood">
+        <p>Before the world asked questions,<br>you were already curious.</p>
+      </div>
+
+      <div class="journey-item">
+        <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce" alt="Early Years">
+        <p>Learning to fall, learning to rise.</p>
+      </div>
+
+      <div class="journey-item">
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Teenage">
+        <p>Somewhere between growing up<br>and figuring things out.</p>
+      </div>
+
+      <div class="journey-item">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Young Adult">
+        <p>Strength forming quietly.</p>
+      </div>
+
+      <div class="journey-item">
+        <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38" alt="Dreams">
+        <p>Dreams getting louder.</p>
+      </div>
+
+      <div class="journey-item">
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" alt="Now">
+        <p>Becoming someone younger you would look up to.</p>
+      </div>
+
+      <div class="journey-item">
+        <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12" alt="Growth">
+        <p>Still learning. Still becoming.</p>
+      </div>
+
+      <div class="journey-item">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1" alt="Future">
+        <p>The story is still unfolding.</p>
+      </div>
+
     </div>
-
-    <div class="journey-item">
-      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
-      <p>Somewhere between growing up<br>and figuring things out.</p>
-    </div>
-
-    <div class="journey-item">
-      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e">
-      <p>Stronger. Softer. Still learning.<br>Still becoming.</p>
-    </div>
-
   </div>
 </section>
 
 <style>
-    /* JOURNEY SECTION */
-#journey {
-  padding: 80px 20px;
-}
-
-.journey-sub {
-  opacity: 0.7;
-  margin-bottom: 40px;
-  font-size: 15px;
-}
-
+/* Horizontal scroll container */
 .journey-track {
   display: flex;
-  gap: 30px;
   overflow-x: auto;
-  padding: 20px 10px;
-  scroll-snap-type: x mandatory;
-}
-
-.journey-track::-webkit-scrollbar {
-  height: 8px;
-}
-.journey-track::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.2);
-  border-radius: 10px;
-}
-
-.journey-item {
-  min-width: 260px;
-  max-width: 320px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 20px;
-  padding: 15px;
-  scroll-snap-align: center;
-  box-shadow: 0 0 20px rgba(173,190,255,0.15);
-}
-
-.journey-item img {
-  width: 100%;
-  height: auto; /* IMPORTANT: keeps original photo ratio */
-  border-radius: 14px;
-  margin-bottom: 12px;
-}
-
-.journey-item p {
-  font-size: 14px;
-  line-height: 1.6;
-  opacity: 0.85;
-}
-
-  html, body {
-  background-color: #0b1026;
-  overflow-x: hidden;
-}
-
-/* YOUR JOURNEY SECTION */
-#journey {
-  background: linear-gradient(180deg, #0b1026, #0e1433);
-  padding: 90px 0;
-}
-
-.journey-sub {
-  opacity: 0.7;
-  margin-bottom: 40px;
-  font-size: 15px;
-}
-
-.journey-track {
-  display: flex;
-  gap: 40px;
-  padding: 40px 60px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  padding: 20px 0;
+  gap: 20px;
 }
 
+/* Hide scrollbar */
 .journey-track::-webkit-scrollbar {
   display: none;
 }
 
+/* Each photo card */
 .journey-item {
-  flex: 0 0 280px;
+  min-width: 250px;
+  flex: 0 0 auto;
   background: rgba(255,255,255,0.08);
-  border-radius: 22px;
-  padding: 18px;
-  scroll-snap-align: center;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-  box-shadow: 0 0 18px rgba(173,190,255,0.12);
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .journey-item img {
   width: 100%;
-  height: auto;
-  border-radius: 16px;
-  margin-bottom: 14px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
+/* Hover effect: enlarge image and card */
+.journey-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(173,190,255,0.3);
+}
+
+.journey-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Optional: text below image */
 .journey-item p {
-  font-size: 14px;
-  line-height: 1.7;
-  opacity: 0.85;
+  margin-top: 10px;
+  line-height: 1.4;
+  font-size: 0.95rem;
+  color: #e6ebff;
 }
-
-.journey-item.active {
-  transform: scale(1.12);
-  box-shadow: 0 0 35px rgba(173,190,255,0.35);
-}
-
 </style>
+
     
   </div>
 </section>
