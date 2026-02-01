@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Your Journey - Vishvesh ❄️</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, #0b1026, #111833);
+    color: #e6ebff;
+    overflow-x: hidden;
+    text-align: center;
+  }
+
+  h1,h2 { font-family: 'Playfair Display', serif; }
+
+  .back-btn {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  .back-btn:hover { background: rgba(255,255,255,0.2); }
+
+  .journey-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .journey-item {
+    flex: 0 0 auto;
+    width: 250px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 20px;
+    padding: 20px;
+    transition: transform 0.3s;
+  }
+
+  .journey-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.4s;
+  }
+
+  .journey-item:hover img {
+    transform: scale(1.05);
+  }
+
+  .journey-item:hover {
+    transform: scale(1.05);
+  }
+
+  .journey-item p {
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+
+  /* Optional scrollbar styling */
+  .journey-container::-webkit-scrollbar {
+    height: 8px;
+  }
+  .journey-container::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+  }
+
+  section { padding: 50px 20px; }
+</style>
+</head>
+
+<body>
+
+<section>
+  <h1>Your Journey 🌟</h1>
+  <p>Scroll through the story of you — from the boy you were to the incredible person you are now.</p>
+  <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+</section>
+
+<section class="journey-container">
+  <!-- Editable Journey Items -->
+
+  <div class="journey-item">
+    <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d" alt="Childhood" id="img1">
+    <p id="caption1">Before the world asked questions, you were already curious.</p>
+  </div>
+
+  <div class="journey-item">
+    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Teenage Years" id="img2">
+    <p id="caption2">Somewhere between growing up and figuring things out.</p>
+  </div>
+
+  <div class="journey-item">
+    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Now" id="img3">
+    <p id="caption3">Stronger. Softer. Still learning. Still becoming.</p>
+  </div>
+
+  <div class="journey-item">
+    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac" alt="Achievement 1" id="img4">
+    <p id="caption4">Passion for gaming and adventures shaping your story.</p>
+  </div>
+
+  <div class="journey-item">
+    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="Achievement 2" id="img5">
+    <p id="caption5">Every step forward shows your dedication and growth.</p>
+  </div>
+
+  <div class="journey-item">
+    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1" alt="Achievement 3" id="img6">
+    <p id="caption6">Moments with loved ones make your story shine even brighter.</p>
+  </div>
+
+  <div class="journey-item">
+    <img src="https://images.unsplash.com/photo-1531251445707-1f000e1e87d0" alt="Now 2" id="img7">
+    <p id="caption7">Learning, exploring, and becoming the best version of yourself.</p>
+  </div>
+
+</section>
+
+<script>
+  // If you want to edit images or captions easily, just do:
+  // document.getElementById('img1').src = 'newImageURL';
+  // document.getElementById('caption1').innerText = 'New caption here';
+</script>
+
+</body>
+</html>
