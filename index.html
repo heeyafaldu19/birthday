@@ -71,26 +71,32 @@ button {
   </button>
 </section>
 
-  <section id="journey">
-  <h2>From Then to Now</h2>
-  <p class="journey-sub">A quiet scroll through the boy you were, and the man you are becoming.</p>
+<section id="journey">
+  <h2>Your Journey</h2>
+  <p class="journey-sub">
+    A slow scroll through who you were, who you are, and who you're becoming.
+  </p>
 
   <div class="journey-track">
 
     <div class="journey-item">
-      <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d" alt="Childhood">
+      <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d">
       <p>Before the world asked questions,<br>you were already curious.</p>
     </div>
 
     <div class="journey-item">
-      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Teenage years">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
       <p>Somewhere between growing up<br>and figuring things out.</p>
     </div>
 
     <div class="journey-item">
-      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Now">
+      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e">
       <p>Stronger. Softer. Still learning.<br>Still becoming.</p>
     </div>
+
+  </div>
+</section>
+
 <style>
     /* JOURNEY SECTION */
 #journey {
@@ -141,6 +147,65 @@ button {
   line-height: 1.6;
   opacity: 0.85;
 }
+
+  html, body {
+  background-color: #0b1026;
+  overflow-x: hidden;
+}
+
+/* YOUR JOURNEY SECTION */
+#journey {
+  background: linear-gradient(180deg, #0b1026, #0e1433);
+  padding: 90px 0;
+}
+
+.journey-sub {
+  opacity: 0.7;
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+
+.journey-track {
+  display: flex;
+  gap: 40px;
+  padding: 40px 60px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.journey-track::-webkit-scrollbar {
+  display: none;
+}
+
+.journey-item {
+  flex: 0 0 280px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 22px;
+  padding: 18px;
+  scroll-snap-align: center;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 0 18px rgba(173,190,255,0.12);
+}
+
+.journey-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  margin-bottom: 14px;
+}
+
+.journey-item p {
+  font-size: 14px;
+  line-height: 1.7;
+  opacity: 0.85;
+}
+
+.journey-item.active {
+  transform: scale(1.12);
+  box-shadow: 0 0 35px rgba(173,190,255,0.35);
+}
+
 </style>
     
   </div>
@@ -207,5 +272,37 @@ for(let i=0;i<30;i++){
 }
 </script>
 
+  <script>
+for(let i=0;i<30;i++){
+  let snow=document.createElement("div");
+  snow.innerHTML="❄️";
+  snow.className="snowflake";
+  snow.style.left=Math.random()*100+"vw";
+  snow.style.animationDuration=3+Math.random()*5+"s";
+  document.body.appendChild(snow);
+}
+</script>
+
+<!-- 🔽 ADD THIS RIGHT HERE 🔽 -->
+<script>
+const items = document.querySelectorAll('.journey-item');
+const track = document.querySelector('.journey-track');
+
+track.addEventListener('scroll', () => {
+  let center = track.scrollLeft + track.offsetWidth / 2;
+
+  items.forEach(item => {
+    let itemCenter = item.offsetLeft + item.offsetWidth / 2;
+
+    if (Math.abs(center - itemCenter) < item.offsetWidth / 2) {
+      item.classList.add('active');
+    } else {
+      item.classList.remove('active');
+    }
+  });
+});
+</script>
+
 </body>
 </html>
+
