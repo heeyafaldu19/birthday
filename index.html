@@ -71,6 +71,81 @@ button {
   </button>
 </section>
 
+  <section id="journey">
+  <h2>From Then to Now</h2>
+  <p class="journey-sub">A quiet scroll through the boy you were, and the man you are becoming.</p>
+
+  <div class="journey-track">
+
+    <div class="journey-item">
+      <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d" alt="Childhood">
+      <p>Before the world asked questions,<br>you were already curious.</p>
+    </div>
+
+    <div class="journey-item">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Teenage years">
+      <p>Somewhere between growing up<br>and figuring things out.</p>
+    </div>
+
+    <div class="journey-item">
+      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Now">
+      <p>Stronger. Softer. Still learning.<br>Still becoming.</p>
+    </div>
+<style>
+    /* JOURNEY SECTION */
+#journey {
+  padding: 80px 20px;
+}
+
+.journey-sub {
+  opacity: 0.7;
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+
+.journey-track {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding: 20px 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.journey-track::-webkit-scrollbar {
+  height: 8px;
+}
+.journey-track::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 10px;
+}
+
+.journey-item {
+  min-width: 260px;
+  max-width: 320px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 15px;
+  scroll-snap-align: center;
+  box-shadow: 0 0 20px rgba(173,190,255,0.15);
+}
+
+.journey-item img {
+  width: 100%;
+  height: auto; /* IMPORTANT: keeps original photo ratio */
+  border-radius: 14px;
+  margin-bottom: 12px;
+}
+
+.journey-item p {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+</style>
+    
+  </div>
+</section>
+
 
 <section id="hub">
   <div class="card">
